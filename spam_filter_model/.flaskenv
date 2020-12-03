@@ -1,0 +1,2 @@
+FLASK_APP=spam.py
+FLASK_ENV=development
