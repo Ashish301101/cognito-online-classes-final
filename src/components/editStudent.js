@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
 export default class EditStudent extends Component {
   constructor(props) {
     super(props);
@@ -77,16 +77,17 @@ export default class EditStudent extends Component {
     axios.post('http://localhost:5500/students/updateStudent/' + this.props.match.params.id, details)
       .then(res => console.log(res.data));
 
-    window.location = '/';
+    window.location = '/displayStudent';
   }
 
   render() {
     return (
     
     <div className="container-fluid bground">
+      <br></br><br></br><h3 class="jhg">Edit Student Details</h3>
       <div className="row justify-content-center">
       <div className="col-12 col-sm-6 col-md-3">
-      <h3>Edit Student Details</h3>
+      
       <form onSubmit={this.handleSubmit}>
 
         {/* dropdown of names:(We have used input field instead)
@@ -144,6 +145,7 @@ export default class EditStudent extends Component {
       </form>
       </div>
       </div>
+      <div class="anan"><Link to="/displayStudent"><button className="button-quiz btn btn-light ">Back</button></Link></div>
       </div>
     
     )

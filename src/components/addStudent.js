@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from "axios";
+import { Link } from 'react-router-dom';
+import "./global.css"
 
 export default class AddStudent extends Component {
     constructor(props){
@@ -32,8 +34,9 @@ export default class AddStudent extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         axios.post(`http://localhost:5500/students/addStudent`,{Studentname:this.state.username,email:this.state.email,srn:this.state.srn})
-        .then(res => console.log(res));
-        // window.location = '/teachers';
+        .then(res => console.log(res))
+        
+        window.location = '/displayStudent';
     }
     render() {
         return (
@@ -56,6 +59,7 @@ export default class AddStudent extends Component {
                 </form>
             </div>
             </div>
+                    <div class="ana"><Link to="/displayTeachers"><button className="button-quiz btn btn-light ">Back</button></Link></div>
             </div>
         )
     }

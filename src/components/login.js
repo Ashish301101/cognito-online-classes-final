@@ -38,8 +38,8 @@ export default class Login extends Component {
                 this.setState({loggedIn:"Wrong Details! Try Again..."});
                 {console.log(this.state.loggedIn)}
              }
-        });
-        // window.location = '/teachers';
+        }).catch(err => this.setState({loggedIn:"Wrong Details! Try Again..."}));
+        // window.location = '/displayTeachers';
     }
     // test =  ()=>{
     //     axios.post("http://localhost:5500/teachers/test","testing").then(()=>console.log("SENT"));
@@ -66,11 +66,13 @@ export default class Login extends Component {
                         </div>
                     </div>
                 </form>
-            <div>
-                <h2>{this.state.loggedIn}</h2>
+                
             </div>
-            </div>
+            
         </div>
+        <div>
+                <h6 class="qqq">{this.state.loggedIn}</h6>
+                </div>
     </div>
         )
     }

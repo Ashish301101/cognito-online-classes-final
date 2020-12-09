@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import DateTimePicker from 'react-datetime-picker'
 import "./global.css"
+import { Link } from 'react-router-dom';
 export default class EditClass extends Component {
   constructor(props) {
     super(props);
@@ -103,7 +104,7 @@ export default class EditClass extends Component {
       <div className="container-fluid bground">
             <div className="row justify-content-around">
             <div className="col-12 col-sm-6 col-md-3"></div>
-      <h3 class="koma">Edit Class Details</h3>
+      <h3 class="koma lkj">Edit Class Details</h3>
       <form onSubmit={this.handleSubmit}>
         <div className="form-containerr form-group mt-5 sure">
         
@@ -182,7 +183,11 @@ export default class EditClass extends Component {
         </div>
       </form>
     </div>
+    
+    <div class="lana"><Link to="/displayClass"><button className="button-quiz btn btn-light ">Back</button></Link>
     </div>
+    </div>
+    
     </div>
     
     )

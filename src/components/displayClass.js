@@ -8,8 +8,8 @@ const Class = props => (
       <td>{props.Class.teacherName}</td>
       <td>{props.Class.startTime.toString().split('T')[0]} {','} {props.Class.startTime.toString().split('T')[1].split('Z')[0]}</td>
       <td>{props.Class.endTime.toString().split('T')[0]} {','} {props.Class.endTime.toString().split('T')[1].split('Z')[0]}</td>
-      <td>
-        <Link class="pepe1" to={"/updateClass/"+props.Class._id}>edit</Link> | <a class = "pepe1" href="#" onClick={() => { props.deleteClass(props.Class._id) }}>delete</a> | <Link class="pepe1" to={"/updateClass/addStudent/"+props.Class._id}>add a student</Link> | <Link class="pepe1" to={"/displayStudentsofClass/"+props.Class._id}>display students</Link>
+      <td className='pep1-hover'>
+        <Link class="pepe1" to={"/updateClass/"+props.Class._id}>edit</Link> | <a class = "pepe1" href="#" onClick={() => { props.deleteClass(props.Class._id) }}>delete</a> | <Link class="pepe1" to={"/updateClass/addStudent/"+props.Class._id}>add a student</Link> | <Link class="pepe1" to={"/displayStudentsofClass/"+props.Class._id}>display students</Link> | <a class="pepe1" href={"http://localhost:5500/"+props.Class._id}>Start </a>
       </td>
     </tr>
   )
@@ -68,7 +68,10 @@ const Class = props => (
                     { this.ClassList() }
                 </tbody>
                 </table>
-            </div></div>
+            </div>
+            <div class="k">
+                <Link to="/addClass"><button className="button-quiz btn btn-light g">Add class</button></Link></div>
+            </div>
         )
     }
 }

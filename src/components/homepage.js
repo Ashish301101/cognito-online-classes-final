@@ -5,6 +5,7 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
+import "./global.css"
 
 const Home = () => {
     const [state] = React.useState([
@@ -43,7 +44,7 @@ const Home = () => {
     title: "COGNITO",
     text:
       "A platform for eClassroom​ with innovation.",
-    image: "/images/bg.gif",
+    image: "/images/bg4.gif",
   });
 
   const [header] = React.useState({
@@ -75,7 +76,7 @@ const Home = () => {
             </div>
             <div className="col-6">
             <div className="banner__img">
-                <img src={states.image} alt="man" width="700" />
+                {/* <img src={states.image} alt="man" width="700" /> */}
             </div>
             </div>
         </div>

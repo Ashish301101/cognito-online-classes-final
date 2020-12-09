@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
 export default class displayAttendance extends Component {
   constructor(props) {
     super(props);
@@ -43,23 +43,23 @@ export default class displayAttendance extends Component {
   render() {
     return (
     
-    <div className="container-fluid bground">
-      <h3>Student : {this.state.studentName}</h3>
-     <table>
+    <div className="container-fluid bground ">
+      <br></br><h3 class="mzx">Student : {this.state.studentName}</h3>
+     <table  className="table table table-bordered table table-hover table table-dark">
        <tr>
          <th>Date</th>
          <th>Class</th>
          <th>Teacher</th>
-         <th>Attended?</th>
-         <th>Attentiveness?</th>
-         <th>a</th>
-         <th>b</th>
+         <th>Attended</th>
+         <th>PopUp 1</th>
+         <th>PopUp 2</th>
+         <th>popUp 3</th>
          {/* <th></th> */}
        </tr>
         {this.listStudents()}
 
      </table>
-
+     <div class="anana"><Link to="/displayStudent"><button className="button-quiz btn btn-light ">Back</button></Link></div>
       </div>
     
     )

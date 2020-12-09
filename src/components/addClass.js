@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import axios from "axios";
 import DateTimePicker from 'react-datetime-picker'
+import "./global.css"
 
 export default class AddClass extends Component {
     constructor(props){
@@ -85,10 +87,10 @@ export default class AddClass extends Component {
                     <div className="col-12 col-sm-6 col-md-3">
                 <form onSubmit={this.handleSubmit}>
                 <div className="form-containerr form-group mt-5 coolit">
-                <label>Class Name</label>
+                <label class="piu">Class Name</label>
                 <input type="text" placeholder="Class Name" className="form-control" id="xyz" name="Classname" value={this.state.className} onChange={this.handleName} required />
                 <br></br>
-                <label>Teacher Name</label>
+                <label class="piuk">Name</label>
                 {/* <input type="teacherName" placeholder="teacherName" id="teacherName" name="teacherName" value={this.state.teacherName} onChange={this.handleteacherName} required /> */}
 
                 <select ref="teacherInput"
@@ -106,11 +108,11 @@ export default class AddClass extends Component {
                     }
                 </select>
                 <br></br>
-                <label>startTime</label>
+                <label class="piuj">start time</label>
                 <DateTimePicker  id="startTime" value={this.state.startTime} onChange={this.handleStartTime} required />
-                <br></br>
-                <label>endTime</label>
-                <DateTimePicker id="endTime" value={this.state.endTime} onChange={this.handleEndTime} required />
+                <br></br><br></br>
+                <label class="piuj">end time</label>
+                <DateTimePicker class="jaq" id="endTime" value={this.state.endTime} onChange={this.handleEndTime} required />
                 <br></br>
                 <br></br>
                 <input type="submit" className="form-control btn-info" value="Submit"/>
@@ -122,6 +124,8 @@ export default class AddClass extends Component {
                 </div>
             </div>
             </div>
+            <div class="aa">
+                <Link to="/displayTeachers"><button className="button-quiz btn btn-light">Back</button></Link></div>
             </div>
         )
     }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
+import "./global.css"
 export default class EditTeacher extends Component {
   constructor(props) {
     super(props);
@@ -72,11 +73,12 @@ export default class EditTeacher extends Component {
 
   render() {
     return (
-    <div>
-    <div className="container-fluid">
+    <div> 
+    <div className="container-fluid bground"><br></br>
+    <h3 class="kk">Edit User Details</h3>
     <div className="row justify-content-center">
       <div className="col-12 col-sm-6 col-md-3">
-      <h3>Edit User Details</h3>
+     
 
     
       <form onSubmit={this.handleSubmit}>
@@ -127,7 +129,9 @@ export default class EditTeacher extends Component {
       </form>
       </div>
       </div>
+      <div class="ananan"><Link to="/displayTeachers"><button className="button-quiz btn btn-light ">Back</button></Link></div>
       </div>
+    
     </div>
     )
   }

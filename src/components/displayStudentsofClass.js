@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import "./global.css"
+import { Link } from 'react-router-dom';
 export default class displayStudentsofClass extends Component {
   constructor(props) {
     super(props);
@@ -31,7 +32,7 @@ export default class displayStudentsofClass extends Component {
   studentList = () => {
       let students = [];
       if(this.state.studentsAdded.length === 0){
-          students.push(<h5>No students yet!</h5>)
+          students.push(<h5 class="gh">No students yet!</h5>)
       }
       else{
           {console.log("SUCCESS")}
@@ -69,7 +70,9 @@ export default class displayStudentsofClass extends Component {
           <h4 class="cfor">Students added</h4>
           <ul class="list-group">
           {this.studentList()}</ul>
-      </div>
+      </div><div class="jqsa">
+      <Link to="/displayClass"><button className="button-quiz btn btn-light k" >Back</button></Link></div>
+      
     </div>
     )
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
 export default class addStudentToClass extends Component {
   constructor(props) {
     super(props);
@@ -85,7 +85,7 @@ export default class addStudentToClass extends Component {
   studentList = () => {
       let students = [];
       if(this.state.studentsAdded.length === 0){
-          students.push(<h5>No students yet!</h5>)
+          students.push(<h5 class="bobmarley">No students yet!</h5>)
       }
       else{
           {console.log("SUCCESS")}
@@ -112,17 +112,17 @@ export default class addStudentToClass extends Component {
   render() {
     return (
     <div className="container-fluid bground">
-      <div class="dfs">
+      <div class="dfs"><br></br>
       <h3 class="afor">Add Student</h3>
       <h4 class="afor">Class Name : {this.state.className}</h4>
       <h4 class="afor">By : {this.state.teacherName}</h4></div>
       <form onSubmit={this.handleSubmit}>
       
         <div className="form-group"> 
-        <label class="bfs">Student Name </label>
-            <select ref="studentInput"
+        <label class="bfs cringe">Student Name </label>
+            <select  ref="studentInput"
                 required
-                className="form-control"
+                className="form-control koli"
                 value={this.state.studentName}
                 onChange={this.handleStudentname}>
                 {
@@ -137,13 +137,16 @@ export default class addStudentToClass extends Component {
         </div>
         
         <div className="form-group">
-            <input type="submit" value="Add Details" className="btn btn-primary" />
+            <input type="submit" value="Add Details" className="btn btn-primary mqw" />
         </div>
       </form>
 
       <div class="maams">
           <h4 class="mlo">Students added</h4>
           {this.studentList()}
+      </div><br></br>
+      <div class="noah">
+      <Link to="/displayClass"><button className="button-quiz btn btn-light">Back</button></Link>
       </div>
     </div>
     )

@@ -112,7 +112,7 @@ export default class joinClass extends Component {
 
   render() {
     return (
-      
+    
   <div className="container-fluid bground">
     <div className="row justify-content-center">
     <div className="col-12 col-sm-6 col-md-3">
@@ -143,6 +143,7 @@ export default class joinClass extends Component {
       </div>
       </div>
       <div class="split right">
+        <div>
       <form onSubmit = {this.handleSubmit2}>
       <div className="form-group form-containerr whybro ">
           <label>Enter the SRN for attendance:</label>
@@ -151,14 +152,19 @@ export default class joinClass extends Component {
           <label>Enter the class ID to join the class:</label>
           <input type="text" className="form-control" placeholder="Class ID" id="abc" name="ClassId" value={this.state.classId} onChange={this.handleClassId} required />
           <br></br>
-          <input type="submit" className="form-control btn btn-info" value="Join Class" />
+          <input type="submit" className="form-control btn btn-info cool" value="Join Class" /><br></br>
+          
+          
       </div>
-      </form></div>
-      
-      {this.state.timetable.length==0?this.state.error2:''}
+     
+      </form>
+      </div></div>
+      <div class="coolitit"><h4 class="nm">{this.state.timetable.length==0?this.state.error2:''}</h4></div>
+    
     </div>
     </div>
-  </div>
+    </div>
+    
     )
   }
 }

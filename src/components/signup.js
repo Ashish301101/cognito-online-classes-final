@@ -34,7 +34,7 @@ export default class Signup extends Component {
         console.log({Teachername:this.state.username,password:this.state.password});
         axios.post(`http://localhost:5500/teachers/signup`,{Teachername:this.state.username,email:this.state.email,password:this.state.password})
         .then(res => console.log(res));
-        // window.location = '/teachers';
+        window.location = '/displayTeachers';
     }
     render() {
         return (

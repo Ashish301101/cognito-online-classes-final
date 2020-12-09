@@ -7,7 +7,7 @@ const User = props => (
       <td>{props.teacher.teacherName}</td>
       <td>{props.teacher.email}</td>
       <td>
-        <Link to={"/editTeacher/"+props.teacher._id}>edit</Link> | <a href="#" onClick={() => { props.deleteUser(props.teacher._id) }}>delete</a>
+        <Link class="pepe3" to={"/editTeacher/"+props.teacher._id}>edit</Link> | <a class="pepe3" href="#" onClick={() => { props.deleteUser(props.teacher._id) }}>delete</a>
       </td>
     </tr>
   )
@@ -49,8 +49,8 @@ const User = props => (
 
     render() {
         return (
-          <div className="alert alert-primary">
-                <h3 class="text-center font-weight-bolder">All Users</h3>
+          <div className="alert alert-primary bground">
+                <h3 class="text-center font-weight-bolder mzxo">All Users</h3>
                 <table className="table table table-bordered table table-hover table table-dark">
                 <thead className="thead-dark">
                     <tr>
@@ -63,6 +63,12 @@ const User = props => (
                     { this.teacherList() }
                 </tbody>
                 </table>
+                <div class="k">
+			            <Link to="/addStudent"><button className="button-quiz btn btn-light k">Add Students</button></Link>
+			            <Link to="/addClass"><button className="button-quiz btn btn-light k" >Add Classes</button></Link>
+                  <Link to="/displayClass"><button className="button-quiz btn btn-light k" >Display Classes</button></Link>
+                  <Link to="/displayStudent"><button className="button-quiz btn btn-light k" >Display Students</button></Link>
+		            </div>
             </div>
         )
     }

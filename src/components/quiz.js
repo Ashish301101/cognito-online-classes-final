@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "./quiz.css"
 
 export default function Quiz() {
@@ -67,8 +68,11 @@ export default function Quiz() {
             <div className='app'>
                 <div className="app1">
                 {showScore ? (
-				<div className='score-section'>
-					You scored {score} out of {questions.length}
+				<div>
+					<div className='score-section'>
+						You scored {score} out of {questions.length}
+					</div>
+					
 				</div>
 			) : (
 				<>
@@ -86,7 +90,13 @@ export default function Quiz() {
 				</>
 			)}
                 </div>
+				<br/>
+				
 			
+		</div>
+		<div class="k">
+			<Link to="/"><button className="button-quiz btn btn-light k">Home</button></Link>
+			<Link to="/joinClass"><button className="button-quiz btn btn-light k" >New Class</button></Link>
 		</div>
         </div>
       </div>

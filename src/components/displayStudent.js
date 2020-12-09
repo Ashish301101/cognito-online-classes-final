@@ -8,7 +8,7 @@ const Student = props => (
       <td>{props.student.srn}</td>
       <td>{props.student.email}</td>
       <td>
-        <Link to={"/editStudent/"+props.student._id}>edit</Link> | <a href="#" onClick={() => { props.deleteStudent(props.student._id) }}>delete</a> | <Link to={"/displayAttendance/"+props.student.studentName}>attendance</Link>
+        <Link class="pepe3" to={"/editStudent/"+props.student._id}>edit</Link> | <a class="pepe3" href="#" onClick={() => { props.deleteStudent(props.student._id) }}>delete</a> | <Link class="pepe3" to={"/displayAttendance/"+props.student.studentName}>attendance</Link>
       </td>
     </tr>
   )
@@ -50,8 +50,8 @@ const Student = props => (
 
     render() {
         return (
-            <div className="alert alert-primary">
-                <h3 class="text-center font-weight-bolder">All Students</h3>
+            <div className="alert alert-primary bground ">
+                <h3 class="text-center font-weight-bolder mzxo">All Students</h3>
                 <table className="table table table-bordered table table-hover table table-dark">
                 <thead className="thead-dark">
                     <tr class="bg-primary">
@@ -65,6 +65,11 @@ const Student = props => (
                     { this.studentList() }
                 </tbody>
                 </table>
+                <div class="k">
+                <Link to="/addClass"><button className="button-quiz btn btn-light g">Add class</button></Link>
+                <Link to="/addStudent"><button className="button-quiz btn btn-light g">Add Student</button></Link>
+                <Link to="/displayTeachers"><button className="button-quiz btn btn-light g">Back</button></Link>
+               </div>
             </div>
             
         )
