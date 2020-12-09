@@ -41,4 +41,7 @@ the listener.
 <li>Testing the understanding of the concepts by the students, so that they
 can learn from your mistakes in the earlier stages itself.
 <li>Solely based for educational purposes.
+  
+  <h4>Presentation:</h4>
+  https://docs.google.com/presentation/d/1aPy-ExXsq8p-AfX-kSuO5AfeobCA7PPGIAIfkEYUKsg/edit?usp=sharing
 
