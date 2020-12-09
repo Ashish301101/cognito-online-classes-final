@@ -59,7 +59,7 @@ router.route('/signin').post((req, res) => {
             else{
                 res.json({st:"unsuccessful"});
             }
-        }).catch(err => res.status(404).json("Not found!"));
+        }).catch(err => res.json("Not found!"));
 
 });
 

@@ -65,7 +65,7 @@ app.get('/:room',(req,res)=>{
           });
           Class.markModified('students');
           Class.save()
-          .then(() => console.log('Attendance added!'))
+          .then(() => {})
           .catch(err => console.log(''));
           // console.log(Class.students);
           res.render('room',{studentName:student,className:className,teacherName:teacherName,roomId:roomId,duration:duration}); 

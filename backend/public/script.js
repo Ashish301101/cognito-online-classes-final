@@ -9,7 +9,7 @@ let myVideoStream;
 const myVideo = document.createElement('video')
 myVideo.muted = true;
 const peers = {}
-let senders = {current:[]}; //for screen share
+
 navigator.mediaDevices.getUserMedia({
   video: true,
   audio: true
@@ -66,8 +66,7 @@ function connectToNewUser(userId, stream) {
   })
 
   peers[userId] = call
-  // stream.getTracks().forEach(track => ( senders.addTrack(track,stream)));//for screen share
-  //screen share
+
 }
 
 function addVideoStream(video, stream) {
@@ -75,12 +74,7 @@ function addVideoStream(video, stream) {
   video.addEventListener('loadedmetadata', () => {
     video.play()
   })
-  // let name = document.createElement('div');
-  // name.style = 'color:white';
-  // name.innerHTML = studentName;
-  // let mainDiv = document.createElement('div');
-  // mainDiv.append(video);
-  // mainDiv.append(name);
+
   videoGrid.append(video);
 }
 
@@ -94,7 +88,6 @@ const scrollToBottom = () => {
 
 const muteUnmute = () => {
   const enabled = myVideoStream.getAudioTracks()[0].enabled;
-//   fetch('http://localhost:5500/click');
   if (enabled) {
     myVideoStream.getAudioTracks()[0].enabled = false;
     setUnmuteButton();
@@ -147,18 +140,6 @@ const setPlayVideo = () => {
   document.querySelector('.main__video_button').innerHTML = html;
 }
 
-// $('.main__controls__button').click(function shareScreen() {
-//   navigator.mediaDevices.getDisplayMedia({ cursor: true }).then(stream => {
-//       // const screenTrack = stream.getTracks()[0];
-//       // senders.current.find(sender => sender.track.kind === 'video').replaceTrack(screenTrack);
-//       // screenTrack.onended = function() {
-//       //     senders.current.find(sender => sender.track.kind === "video").replaceTrack(userStream.current.getTracks()[1]);
-//       // }
-//       addVideoStream(document.createElement('video'), stream)
-//   })
-// });
-
-// popup
 
 var modal = document.getElementById("myModal");
 
