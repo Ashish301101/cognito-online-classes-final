@@ -13,6 +13,7 @@
 
 <h4>For the spam filter to be woring:</h4>
 <ol>
+  <li>Make sure you have tensorflow, nltk, sklearn and other libraries used in the api.py to be working.
   <li>Download the .h5 file from the link - https://drive.google.com/file/d/1g0X4DIrZE1H2xa5qgXhUT2P5iTZMvL8g/view?usp=sharing (As the file is 50+mb, it couldn't be uploaded to this repo)</li>
   <li>Paste it to /backend folder</li>
   <li>pip install all the modules listed in backend/spam.py folder(eg:tensorflow,nltk etc)</li>
