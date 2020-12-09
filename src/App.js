@@ -18,8 +18,7 @@ import addStudentstoClass from "./components/addStudentstoClass";
 import displayStudentsofClass from "./components/displayStudentsofClass";
 import joinClass from "./components/joinClass";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import quiz from "./components/quiz"
-import displayAttendace from "./components/displayAttendance";
+import quiz from "./components/quiz";
 import displayAttendance from "./components/displayAttendance";
 
 function App() {

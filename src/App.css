@@ -10,12 +10,12 @@ body {
 .header {
   width: 100%;
   height: 100%;
-  /* background: url("/images/bg.gif"); */
-  background: rgb(59, 2, 66);
+  background: url("/images/bg5.gif"); 
+  /* background: rgb(49, 50, 65); */
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-}
+} 
 .navbar {
   width: 100%;
   height: 100px;
@@ -87,7 +87,7 @@ body {
   align-items: center;
   height: 100vh;
   width: 100%;
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 
 .header__section h1 {
